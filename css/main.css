@@ -528,6 +528,11 @@ section.team .card .team-text {
   border: 1px solid #1c1c1c;
   font-size: 12px;
 }
+.btn-sub:hover {
+  background-color: #eee;
+  color: #1c1c1c;
+  border: 1px solid #1c1c1c;
+}
 
 footer {
   background-color: #1c1c1c;

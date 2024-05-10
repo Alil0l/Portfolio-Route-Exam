@@ -587,12 +587,19 @@ section.team {
     }
   }
 }
+
 .btn-sub {
   background-color: #1c1c1c;
   color: #eee;
   border: 1px solid #1c1c1c;
   font-size: 12px;
+  &:hover {
+    background-color: #eee;
+    color: #1c1c1c;
+    border: 1px solid #1c1c1c;
+  }
 }
+
 // End contact
 
 footer {
