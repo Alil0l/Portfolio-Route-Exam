@@ -37,11 +37,16 @@ window.addEventListener("scroll", function () {
     }
 });
 window.addEventListener("load", function () {
-    var _a, _b, _c, _d, _e, _f;
+    var _a, _b, _c;
     (_a = document.querySelector(".head-overlay1")) === null || _a === void 0 ? void 0 : _a.classList.add("head-overlay-top");
     (_b = document.querySelector(".head-overlay2")) === null || _b === void 0 ? void 0 : _b.classList.add("head-overlay-bot");
     (_c = document.querySelector(".fa-spinner")) === null || _c === void 0 ? void 0 : _c.classList.add("hide");
-    (_d = document.querySelector(".w-95")) === null || _d === void 0 ? void 0 : _d.style.width = "95%";
-    (_e = document.querySelector(".w-80")) === null || _e === void 0 ? void 0 : _e.style.width = "80%";
-    (_f = document.querySelector(".w-90")) === null || _f === void 0 ? void 0 : _f.style.width = "90%";
+    document.querySelector(".w-95").style.width = "95%";
+    document.querySelector(".w-80").style.width = "80%";
+    document.querySelector(".w-90").style.width = "90%";
+    setTimeout(function () {
+        document.querySelector(".head-overlay1").style.display = "none";
+        document.querySelector(".head-overlay2").style.display = "none";
+        document.querySelector(".fa-spinner").style.display = "none";
+    }, 2000);
 });

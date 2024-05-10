@@ -43,7 +43,12 @@ window.addEventListener("load", () => {
   document.querySelector(".head-overlay1")?.classList.add("head-overlay-top");
   document.querySelector(".head-overlay2")?.classList.add("head-overlay-bot");
   document.querySelector(".fa-spinner")?.classList.add("hide");
-  document.querySelector(".w-95")?.style.width = "95%";
-  document.querySelector(".w-80")?.style.width = "80%";
-  document.querySelector(".w-90")?.style.width = "90%";
+  document.querySelector(".w-95")!.style.width = "95%";
+  document.querySelector(".w-80")!.style.width = "80%";
+  document.querySelector(".w-90")!.style.width = "90%";
+  setTimeout(() => {
+    document.querySelector(".head-overlay1")!.style.display = "none";
+    document.querySelector(".head-overlay2")!.style.display = "none";
+    document.querySelector(".fa-spinner")!.style.display = "none";
+  }, 2000);
 });
