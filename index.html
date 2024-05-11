@@ -173,7 +173,11 @@
                 </div>
               </div>
               <div class="btns pt-3">
-                <button class="btn btn-down fw-light rounded-1 px-4 py-2">
+                <button
+                  onclick="downloadCV('./assets/Ali Mostafa Abdulhaffiiz - Dev Resume.pdf','Ali CV')"
+                  ;
+                  class="btn btn-down fw-light rounded-1 px-4 py-2"
+                >
                   Download C.V.
                 </button>
                 <button class="btn btn-cont fw-light rounded-1 px-4 py-2">
@@ -957,27 +961,23 @@
         </div>
         <div class="counters-section">
           <div class="container">
-            <div
-              class="counters-box d-flex justify-content-evenly align-items-center"
-            >
-              <div
-                class="counter-card d-flex flex-column justify-content-center align-content-center"
-              >
+            <div class="counters-box row">
+              <div class="counter-card col-12 col-lg-3 mb-3 mb-lg-0">
                 <i class="fa-solid fa-users"></i>
                 <div class="counter" data-target="680">000</div>
                 <h4>Happy Customers</h4>
               </div>
-              <div class="counter-card">
+              <div class="counter-card col-12 col-lg-3 mb-3 mb-lg-0">
                 <i class="fa-solid fa-copy"></i>
                 <div class="counter" data-target="1250">000</div>
                 <h4>Complete Projects</h4>
               </div>
-              <div class="counter-card">
+              <div class="counter-card col-12 col-lg-3 mb-3 mb-lg-0">
                 <i class="fa-solid fa-mug-saucer"></i>
                 <div class="counter" data-target="1570">000</div>
                 <h4>Lines Of Code</h4>
               </div>
-              <div class="counter-card">
+              <div class="counter-card col-12 col-lg-3 mb-3 mb-lg-0">
                 <i class="fa-solid fa-cloud-arrow-down"></i>
                 <div class="counter" data-target="980">000</div>
                 <h4>Files Downloaded</h4>
@@ -1192,5 +1192,13 @@
       </p>
       <span>Designed by Ali Mostafa for Route</span>
     </footer>
+    <script>
+      function downloadCV(href, name) {
+        const link = document.createElement("a");
+        link.href = href;
+        link.download = name;
+        link.click();
+      }
+    </script>
   </body>
 </html>

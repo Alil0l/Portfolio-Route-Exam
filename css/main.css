@@ -247,12 +247,12 @@ section.about .bars .progress .progress-bar {
 section.about .btns .btn-down {
   cursor: pointer;
   background-color: #1c1c1c;
-  color: #eee;
+  color: #fff;
   border: 1px solid #1c1c1c;
   font-size: 12px;
 }
 section.about .btns .btn-down:hover {
-  background-color: #eee;
+  background-color: #fff;
   color: #1c1c1c;
 }
 section.about .btns .btn-cont {
@@ -264,7 +264,7 @@ section.about .btns .btn-cont {
 }
 section.about .btns .btn-cont:hover {
   background-color: #1c1c1c;
-  color: #eee;
+  color: #fff;
 }
 
 section.services {
