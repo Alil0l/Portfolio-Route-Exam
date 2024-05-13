@@ -1,7 +1,9 @@
 // Declaring Variables
 const navbar = document.getElementById("navbar");
 let lastScrollTop = 0;
-let counters = document.querySelectorAll(".counter");
+let counters = document.querySelectorAll(
+  ".counter"
+) as NodeListOf<HTMLDivElement>;
 let interval = 2000;
 
 /////////////////////////////////////
@@ -19,14 +21,13 @@ document.addEventListener("DOMContentLoaded", function () {
 
 // Counters animation
 const startCounting = function () {
-  counters.forEach((val) => {
+  counters.forEach((val: any) => {
     let intialVal = 0;
     let finalVal = parseInt(val.getAttribute("data-target"));
     let time = Math.ceil(interval / finalVal);
     let counter = setInterval(() => {
       intialVal += 2;
       val.textContent = intialVal;
-
       if (intialVal == finalVal) {
         clearInterval(counter);
       }
@@ -40,15 +41,22 @@ window.addEventListener("scroll", function () {
 });
 
 window.addEventListener("load", () => {
-  document.querySelector(".head-overlay1")?.classList.add("head-overlay-top");
-  document.querySelector(".head-overlay2")?.classList.add("head-overlay-bot");
-  document.querySelector(".fa-spinner")?.classList.add("hide");
-  document.querySelector(".w-95")!.style.width = "95%";
-  document.querySelector(".w-80")!.style.width = "80%";
-  document.querySelector(".w-90")!.style.width = "90%";
+  let fade1 = document.querySelector(".head-overlay1") as HTMLElement;
+  let fade2 = document.querySelector(".head-overlay2") as HTMLElement;
+  let spin = document.querySelector(".fa-spinner") as HTMLElement;
+  let bar95 = document.querySelector(".w-95") as HTMLElement;
+  let bar90 = document.querySelector(".w-90") as HTMLElement;
+  let bar80 = document.querySelector(".w-80") as HTMLElement;
+  fade1?.classList.add("head-overlay-top");
+  fade2?.classList.add("head-overlay-bot");
+  spin?.classList.add("hide");
+  bar95.style.width = "95%";
+  bar90.style.width = "90%";
+  bar80.style.width = "80%";
+
   setTimeout(() => {
-    document.querySelector(".head-overlay1")!.style.display = "none";
-    document.querySelector(".head-overlay2")!.style.display = "none";
-    document.querySelector(".fa-spinner")!.style.display = "none";
+    fade1.style.display = "none";
+    fade2.style.display = "none";
+    spin.style.display = "none";
   }, 2000);
 });
