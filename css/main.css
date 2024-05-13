@@ -69,6 +69,7 @@ header {
   background-position: 0px 0px;
   background-repeat: no-repeat;
   background-size: cover;
+  background-attachment: fixed;
   position: relative;
 }
 header .fa-solid.fa-spinner.fa-spin {

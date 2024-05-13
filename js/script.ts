@@ -1,14 +1,8 @@
-// Declaring Variables
-const navbar = document.getElementById("navbar");
-let lastScrollTop = 0;
-let counters = document.querySelectorAll(
-  ".counter"
-) as NodeListOf<HTMLDivElement>;
-let interval = 2000;
-
 /////////////////////////////////////
 // Navbar and Scroll animation
 document.addEventListener("DOMContentLoaded", function () {
+  const navbar = document.getElementById("navbar");
+  let lastScrollTop = 0;
   window.addEventListener("scroll", function () {
     let currentScroll = window.scrollY || document.documentElement.scrollTop;
     if (currentScroll <= 600) {
@@ -21,6 +15,8 @@ document.addEventListener("DOMContentLoaded", function () {
 
 // Counters animation
 const startCounting = function () {
+  let counters = document.querySelectorAll(".counter");
+  let interval = 2000;
   counters.forEach((val: any) => {
     let intialVal = 0;
     let finalVal = parseInt(val.getAttribute("data-target"));
